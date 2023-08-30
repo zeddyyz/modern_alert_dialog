@@ -7,7 +7,6 @@ class ModernAlertDialog {
     BuildContext context, {
     required String title,
     required String message,
-    Color? buttonColor,
   }) {
     bool isDarkMode = MediaQuery.of(context).platformBrightness == Brightness.dark;
 
@@ -63,7 +62,6 @@ class ModernAlertDialog {
     required String title,
     required String message,
     required Function() onPressed,
-    Color? color,
   }) {
     bool isDarkMode = MediaQuery.of(context).platformBrightness == Brightness.dark;
 
