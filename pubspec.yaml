@@ -1,7 +1,7 @@
 name: modern_alert_dialog
-description: A new Flutter package project.
+description: Modern Alert Dialog for Flutter
 version: 0.0.1
-homepage:
+homepage: "string"
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
