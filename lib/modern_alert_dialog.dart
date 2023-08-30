@@ -7,7 +7,7 @@ class ModernAlertDialog {
     BuildContext context, {
     required String title,
     required String message,
-    Color? color,
+    Color? buttonColor,
   }) {
     bool isDarkMode = MediaQuery.of(context).platformBrightness == Brightness.dark;
 
@@ -40,13 +40,13 @@ class ModernAlertDialog {
                 height: 30,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: color ?? Theme.of(context).primaryColor,
+                  color: isDarkMode ? Colors.white : Colors.black,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Text(
+                child: Text(
                   "OK",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: isDarkMode ? Colors.black : Colors.white,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -58,7 +58,7 @@ class ModernAlertDialog {
     );
   }
 
-  alertDialogInfoButton(
+  alertDialogButton(
     BuildContext context, {
     required String title,
     required String message,
@@ -94,13 +94,13 @@ class ModernAlertDialog {
                 height: 30,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: color ?? Theme.of(context).primaryColor,
+                  color: isDarkMode ? Colors.white : Colors.black,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Text(
+                child: Text(
                   "OK",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: isDarkMode ? Colors.black : Colors.white,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -113,12 +113,13 @@ class ModernAlertDialog {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color:
-                      color?.withOpacity(0.15) ?? Theme.of(context).primaryColor.withOpacity(0.15),
+                      isDarkMode ? Colors.white.withOpacity(0.15) : Colors.black.withOpacity(0.15),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Text(
+                child: Text(
                   "Cancel",
                   style: TextStyle(
+                    color: isDarkMode ? Colors.black : Colors.white,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
