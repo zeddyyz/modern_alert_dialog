@@ -57,7 +57,7 @@ class ModernAlertDialog {
     );
   }
 
-  alertDialogButton(
+  alertDialogAction(
     BuildContext context, {
     required String title,
     required String message,
